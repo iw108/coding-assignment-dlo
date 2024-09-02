@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "minddistrict"
+version = "0.1.0"
+description = ""
+authors = ["Isaac Williams <isaac.andrew.williams@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.8.2"
+typer = "^0.12.5"
+
+
+[tool.poetry.group.test.dependencies]
+mypy = "^1.11.2"
+pytest = "^8.3.2"
+
+
+[tool.poetry.scripts]
+url-generator = "minddistrict.cli:app"
+[tool.ruff.lint]
+
+
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
